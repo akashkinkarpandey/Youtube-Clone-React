@@ -13,5 +13,5 @@
 - React Hooks like useEffect() for API calls used.
 - Shimmer has been added and lazy loading as well.
 - Sidebar is there which will appear and can be hidden on clicking the hamburger icon. This is achieved by creating a slice in our store using the concept of React Redux.
-- useState() is used in such cases, but to make our app scalable, we have used Redux.
+- useState() is used in such cases, but to make our app scalable,  Redux has been used.
 - TailwindCSS is used in our project as our focus is more on functionalities.
