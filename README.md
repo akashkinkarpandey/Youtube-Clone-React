@@ -1,7 +1,7 @@
 <h1>YouTube Clone Funtube</h1>
 <h6>React Library has been used</h6>
 
-<img src="github-media/Youtube-clone.gif" alt="Animated GIF">
+<img src="github-media/React-App.gif" alt="Animated GIF">
 
 <h2>Brief desciption of Project</h2>
 
