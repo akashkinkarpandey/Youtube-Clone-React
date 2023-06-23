@@ -5,7 +5,7 @@
 
 <h2>Brief desciption of Project</h2>
 
-- There is a user icon and a clickable Funtube icon which will take us to home page via routing.
+- There is a user icon and a clickable Youtube icon which will take us to home page via routing.
 - Video data is fetched from the YouTube API, which are publicly available and will be displayed on the screen.
 - With the help of dynamic routing, we made the video cards clickable.
 - For routing, we have used React Router DOM to move to different pages.
