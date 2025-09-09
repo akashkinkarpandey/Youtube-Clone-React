@@ -2,12 +2,12 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleMenu } from "../utils/appSlice";
 import { cacheResults } from "../utils/searchSlice";
+const VITE_BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
+
 const Head = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [suggestion, setSuggestion] = useState([]);
   const [showSuggestion, setShowSuggestion] = useState(false);
-
-  // console.log(searchQuery);
   const searchCache = useSelector((store) => store.search);
   const dispatch = useDispatch();
   useEffect(() => {
@@ -26,13 +26,10 @@ const Head = () => {
     if (!searchQuery) return;
     try {
       const res = await fetch(
-        `/api/search?q=${searchQuery}`
+        `${VITE_BACKEND_URL}/api/search?q=${searchQuery}`
       );
-      if (!res.ok) {
-        throw new Error("Failed to fetch suggestions");
-      }
       const json = await res.json();
-      console.log("Suggestions API response:", json); // 👈 check this
+      console.log("Suggestions:", json);
       setSuggestion(json[1]);
       dispatch(
         cacheResults({
@@ -43,6 +40,7 @@ const Head = () => {
       console.error("Error fetching search suggestions:", error);
     }
   };
+
 
 
   const toggleMenuHandeler = () => {

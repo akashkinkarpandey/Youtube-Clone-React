@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { youtube_Api } from "../utils/Constants";
+import { YOUTUBE_API } from "../utils/Constants";
 import Videocards, { AdvideoCard } from "./Videocards";
 import { Link } from "react-router-dom";
 const Videocontainer = () => {
@@ -8,7 +8,7 @@ const Videocontainer = () => {
     fetchData();
   }, []);
   const fetchData = async () => {
-    const data = await fetch(youtube_Api);
+    const data = await fetch(YOUTUBE_API);
     const json = await data.json();
     console.log(json?.items);
     setVideos(json?.items);
