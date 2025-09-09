@@ -1,0 +1,10 @@
+// eslint-disable-next-line react/prop-types
+const Button = ({ name }) => {
+  return (
+    <div>
+      <button className="px-5 m-2 bg-gray-200 py-2 rounded-lg">{name}</button>
+    </div>
+  );
+};
+
+export default Button;
