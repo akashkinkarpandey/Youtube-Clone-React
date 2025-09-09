@@ -10,7 +10,7 @@ const Videocontainer = () => {
   const fetchData = async () => {
     // const data = await fetch(YOUTUBE_API);
     // const json = await data.json();
-    const res = await fetch("http://localhost:5000/api/videos");
+    const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/videos`);
     const json = await res.json();
     console.log(json?.items);
     setVideos(json?.items);
